@@ -25,7 +25,7 @@ against the Windows 11 VM, identifying the OS version and SMB
 configuration without credentials.
 
 ### Finding
-![crackmapexec output](screenshots/crackmapexec%20--shares.png)
+![crackmapexec output](crackmapexec%20--shares.png)
 
 crackmapexec successfully identified:
 - Target OS: Windows 11 / Server 2025 Build 26100
