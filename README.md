@@ -42,7 +42,7 @@ is enabled tells the attacker which attack vectors are unavailable.
 Port scan reconnaissance does not appear in Windows Event Log 
 by default. Detecting network-level reconnaissance requires 
 additional tools such as Suricata or Zeek for network traffic 
-analysis — beyond the scope of this lab's current architecture.
+analysis, which is beyond the scope of this lab's current architecture.
 
 ### As a SOC Analyst I Would
 1. Implement network-level monitoring (Suricata/Zeek) to detect 
@@ -65,7 +65,7 @@ attack against the Windows 11 Administrator account via SMB (port 445).
 ### Kibana Detection
 ![Attack timeline showing 4625 spike](4625.png)
 
-Event ID 4625 (Logon Failure) spiked from 0 to 13+ events per minute 
+Event ID 4625 (Logon Failure) spiked from 0 to 10 events per minute 
 during the attack window (15:58 Jun 22, 2026).
 
 ![Account lockout event 4740](4740.png)
@@ -75,14 +75,14 @@ the Administrator account after repeated failures.
 
 ### Why This Matters
 A single 4625 event is normal (user mistyped password). 
-13 events in one minute from the same source IP is a clear 
+10 events in one minute from the same source IP is a clear 
 indicator of automated credential stuffing. The 4740 lockout 
 confirms the attack triggered Windows' built-in account 
 lockout policy.
 
 ### As a SOC Analyst I Would
 1. Check if any 4624 (successful login) occurred after the 
-   4625 spike — if yes, escalate immediately
+   4625 spike. If yes, escalate immediately
 2. Block the source IP (172.16.10.130) at the firewall
 3. Notify the account owner and verify no unauthorized access
 4. Review logs for any lateral movement after the attack window
