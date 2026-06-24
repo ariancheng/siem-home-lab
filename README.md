@@ -1,4 +1,4 @@
-# SIEM Home Lab — Threat Detection with Elastic Stack
+# SIEM Home Lab : Threat Detection with Elastic Stack
 
 ## Overview
 A hands-on home lab simulating real-world cyber attacks and detecting 
@@ -130,9 +130,8 @@ erase the evidence.
 
 ### Why This Matters
 Each individual event could appear benign in isolation. 
-However, the sequence — account creation → immediate privilege 
-escalation → system directory access → deletion within minutes 
-— is a clear indicator of malicious post-compromise activity.
+However, the sequence from account creation → immediate privilege 
+escalation → system directory access → deletion within minutes, is a clear indicator of malicious post-compromise activity.
 
 **Key insight:** Even though the attacker deleted the backdoor 
 account, the SIEM retains an immutable record of all events. 
@@ -154,7 +153,7 @@ This is why log integrity is critical in incident response.
 - **SIEM has architectural limits:** Network-level attacks 
   (port scans) require additional tools beyond Windows Event Log.
 - **Compatibility is a real-world challenge:** Tool selection 
-  must account for target OS version and architecture — 
+  must account for target OS version and architecture: 
   Hydra failed against Windows 11 SMB3, requiring a switch 
   to crackmapexec.
 - **Logs outlast attackers:** Deleting accounts or files 
