@@ -25,7 +25,7 @@ against the Windows 11 VM, identifying the OS version and SMB
 configuration without credentials.
 
 ### Finding
-![crackmapexec output](screenshots/crackmapexec_--shares.png)
+![crackmapexec output](screenshots/crackmapexec%20--shares.png)
 
 crackmapexec successfully identified:
 - Target OS: Windows 11 / Server 2025 Build 26100
@@ -60,7 +60,7 @@ Used crackmapexec with rockyou.txt wordlist to perform a dictionary
 attack against the Windows 11 Administrator account via SMB (port 445).
 
 ### Attack Evidence
-![Brute force attack output](screenshots/acc_lockout.png)
+![Brute force attack output](screenshots/acc%20lockout.png)
 
 ### Kibana Detection
 ![Attack timeline showing 4625 spike](screenshots/4625.png)
