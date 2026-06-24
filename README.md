@@ -16,7 +16,7 @@ All traffic isolated on VMware Fusion Host-only network (172.16.10.0/24).
 
 ---
 
-## Use Case 1: SMB Reconnaissance
+## 📍Use Case 1: SMB Reconnaissance
 **MITRE ATT&CK:** T1046 — Network Service Discovery
 
 ### What I Simulated
@@ -52,7 +52,7 @@ analysis, which is beyond the scope of this lab's current architecture.
 
 ---
 
-## Use Case 2: Brute Force Attack
+## 📍Use Case 2: Brute Force Attack
 **MITRE ATT&CK:** T1110 — Brute Force
 
 ### What I Simulated
@@ -89,7 +89,7 @@ lockout policy.
 
 ---
 
-## Use Case 3: Suspicious Account Creation & Privilege Escalation
+## 📍Use Case 3: Suspicious Account Creation & Privilege Escalation
 **MITRE ATT&CK:** T1136.001 (Create Local Account) + T1078 (Valid Accounts)
 
 ### What I Simulated
