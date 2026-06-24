@@ -25,7 +25,7 @@ against the Windows 11 VM, identifying the OS version and SMB
 configuration without credentials.
 
 ### Finding
-![crackmapexec output](crackmapexec%20--shares.png)
+![crackmapexec output](screenshots/crackmapexec%20--shares.png)
 
 crackmapexec successfully identified:
 - Target OS: Windows 11 / Server 2025 Build 26100
@@ -60,15 +60,15 @@ Used crackmapexec with rockyou.txt wordlist to perform a dictionary
 attack against the Windows 11 Administrator account via SMB (port 445).
 
 ### Attack Evidence
-![Brute force attack output](acc%20lockout.png)
+![Brute force attack output](screenshots/acc%20lockout.png)
 
 ### Kibana Detection
-![Attack timeline showing 4625 spike](4625.png)
+![Attack timeline showing 4625 spike](screenshots/4625.png)
 
 Event ID 4625 (Logon Failure) spiked from 0 to 10 events per minute 
 during the attack window (15:58 Jun 22, 2026).
 
-![Account lockout event 4740](4740.png)
+![Account lockout event 4740](screenshots/4740.png)
 
 Event ID 4740 triggered at 15:58:38 — Windows automatically locked 
 the Administrator account after repeated failures.
@@ -99,30 +99,30 @@ and deleting the account to cover tracks.
 
 ### Attack Sequence
 
-**Step 1 — Account Created (4720)**
+**Step 1: Account Created (4720)**
 
-![4720 account creation](c3-4720.png)
+![4720 account creation](screenshots/c3-4720.png)
 
 testuser account created at 17:33:06.
 
-**Step 2 — Added to Administrators Group (4732)**
+**Step 2: Added to Administrators Group (4732)**
 
-![4732 privilege escalation](c3-4732.png)
+![4732 privilege escalation](screenshots/c3-4732.png)
 
 testuser added to Administrators group at 17:33:43 — 
 37 seconds after creation. Normal IT operations don't 
 create accounts and immediately grant admin rights.
 
-**Step 3 — Accessed System32 with Admin Privileges**
+**Step 3: Accessed System32 with Admin Privileges**
 
-![testuser accessing System32](system32.png)
+![testuser accessing System32](screenshots/system32.png)
 
 Confirmed testuser has full access to C:\Windows\System32, 
 verifying administrator-level privileges.
 
 **Step 4 — Account Deleted to Cover Tracks**
 
-![Account deletion](delete_testuser.png)
+![Account deletion](screenshots/delete_testuser.png)
 
 testuser deleted. However, the SIEM has already recorded 
 the complete attack chain — deleting the account does not 
