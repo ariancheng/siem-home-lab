@@ -99,13 +99,13 @@ and deleting the account to cover tracks.
 
 ### Attack Sequence
 
-**Step 1: Account Created (4720)**
+**Step 1 - Account Created (4720)**
 
 ![4720 account creation](screenshots/c3-4720.png)
 
 testuser account created at 17:33:06.
 
-**Step 2: Added to Administrators Group (4732)**
+**Step 2 - Added to Administrators Group (4732)**
 
 ![4732 privilege escalation](screenshots/c3-4732.png)
 
@@ -113,7 +113,7 @@ testuser added to Administrators group at 17:33:43 —
 37 seconds after creation. Normal IT operations don't 
 create accounts and immediately grant admin rights.
 
-**Step 3: Accessed System32 with Admin Privileges**
+**Step 3 - Accessed System32 with Admin Privileges**
 
 ![testuser accessing System32](screenshots/system32.png)
 
